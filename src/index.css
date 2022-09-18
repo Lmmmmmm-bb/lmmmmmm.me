@@ -1,14 +1,14 @@
 :root {
-  --c-bg: #ffffff;
-  --c-scroll: #d9d9d9;
-  --c-scroll-hover: #bbbbbb;
-  scrollbar-color: var(--c-scrollbar) var(--c-bg);
+  --lm-bg: #ffffff;
+  --lm-scroll: #d9d9d9;
+  --lm-scroll-hover: #bbbbbb;
+  scrollbar-color: var(--lm-scrollbar) var(--lm-bg);
 }
 
 html.dark {
-  --c-bg: #212121;
-  --c-scroll: #333333;
-  --c-scroll-hover: #555555;
+  --lm-bg: #212121;
+  --lm-scroll: #333333;
+  --lm-scroll-hover: #555555;
 }
 
 html,
@@ -16,6 +16,7 @@ body {
   height: 100%;
   overflow: auto;
   font-family: 'Varela Round', sans-serif;
+  background-color: var(--lm-bg);
 }
 
 #app {
@@ -28,14 +29,29 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--c-scroll);
+  background-color: var(--lm-scroll);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--c-scroll-hover);
+  background-color: var(--lm-scroll-hover);
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--c-bg);
+  background-color: var(--lm-bg);
+}
+
+::selection {
+  background: #333;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #333;
+  color: #fff;
+}
+
+::-webkit-selection {
+  background: #333;
+  color: #fff;
 }

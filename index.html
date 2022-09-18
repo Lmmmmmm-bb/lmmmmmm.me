@@ -14,6 +14,12 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>_lmmmmmm</title>
+  <script>
+    (function () {
+      const darkSchema = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      document.documentElement.classList.toggle('dark', darkSchema)
+    })()
+  </script>
 </head>
 
 <body>
