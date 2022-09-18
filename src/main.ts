@@ -1,5 +1,5 @@
 import 'uno.css';
-import '@unocss/reset/eric-meyer.css';
+import '@unocss/reset/tailwind.css';
 import { ViteSSG } from 'vite-ssg/single-page';
 
 import './index.css';
