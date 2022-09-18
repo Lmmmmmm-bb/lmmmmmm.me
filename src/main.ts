@@ -1,10 +1,8 @@
 import 'uno.css';
-import 'reset-css';
-import { createApp } from 'vue';
+import '@unocss/reset/eric-meyer.css';
+import { ViteSSG } from 'vite-ssg/single-page';
 
 import './index.css';
 import App from './app';
 
-const app = createApp(App);
-
-app.mount('#app');
+export const createApp = ViteSSG(App);
