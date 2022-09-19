@@ -2,41 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
       rel="stylesheet"
     />
+    <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <!-- seo -->
     <meta name="revisit-after" content="15 days" />
     <meta name="author" content="_lmmmmmm" />
-    <meta property="description" content="_lmmmmmm, Front-end Developer." />
+    <meta name="description" content="_lmmmmmm, Front-end Developer." />
     <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
     <meta name="keywords" content="develop, front-end, _lmmmmmm" />
+    <!-- og -->
+    <meta name="twitter:title" content="_lmmmmmm" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="_lmmmmmm, Front-end Developer." />
+    <meta name="twitter:creator" content="@_lmmmmmm" />
+    <meta name="twitter:image" content="https://lmmmmmm.me/avatar.png" />
     <meta property="og:title" content="_lmmmmmm" />
+    <meta property="og:url" content="https://lmmmmmm.me" />
     <meta property="og:image" content="https://lmmmmmm.me/avatar.png" />
     <meta property="og:description" content="_lmmmmmm, Front-end Developer." />
-    <meta property="description" content="_lmmmmmm, Front-end Developer." />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="@_lmmmmmm" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
     <link rel="canonical" href="https://lmmmmmm.me/" />
-    <title>Hi, _lmmmmmm</title>
+    <title>_lmmmmmm</title>
     <script>
-      const colorSchema = window.matchMedia('(prefers-color-scheme: dark)');
-      const darkSchema = window.matchMedia && colorSchema.matches;
+      // dynamic change theme color
+      function dynamicMeta() {
+        // remove prev meta
+        const meta = document.querySelector('meta[name="theme-color"]');
+        meta && meta.remove();
+        // new meta
+        const _meta = document.createElement('meta');
+        _meta.name = 'theme-color';
+        _meta.content = colorSchema.matches ? '#212121' : '#fff';
+        document.head.appendChild(_meta);
+      }
+    </script>
+    <!-- dark mode -->
+    <script>
+      const colorSchema =
+        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+      const darkSchema = colorSchema.matches;
       document.documentElement.classList.toggle('dark', darkSchema);
-      colorSchema.addEventListener('change', () =>
-        document.documentElement.classList.toggle('dark', colorSchema.matches)
-      );
+      dynamicMeta();
+      colorSchema.addEventListener('change', () => {
+        dynamicMeta();
+        document.documentElement.classList.toggle('dark', colorSchema.matches);
+      });
     </script>
   </head>
 
