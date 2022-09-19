@@ -26,6 +26,11 @@ import ExternalLink from '~/components/external-link';
         text="Google"
         to="mailto:lmmmmmm12138@gmail.com"
       />
+      <ExternalLink
+        icon="i-carbon:logo-twitter"
+        text="Twitter"
+        to="https://twitter.com/_lmmmmmm"
+      />
     </div>
   </main>
 </template>
