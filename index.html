@@ -41,12 +41,15 @@
       function dynamicMeta() {
         // remove prev meta
         const meta = document.querySelector('meta[name="theme-color"]');
-        meta && meta.remove();
-        // new meta
-        const _meta = document.createElement('meta');
-        _meta.name = 'theme-color';
-        _meta.content = colorSchema.matches ? '#212121' : '#fff';
-        document.head.appendChild(_meta);
+        if (meta) {
+          meta.content = colorSchema.matches ? '#212121' : '#fff';
+        } else {
+          // new meta
+          const _meta = document.createElement('meta');
+          _meta.name = 'theme-color';
+          _meta.content = colorSchema.matches ? '#212121' : '#fff';
+          document.head.appendChild(_meta);
+        }
       }
     </script>
     <!-- dark mode -->
