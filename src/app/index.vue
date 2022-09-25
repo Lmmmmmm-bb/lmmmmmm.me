@@ -24,7 +24,7 @@ import ExternalLink from '~/components/external-link';
       <ExternalLink
         icon="i-carbon:logo-google"
         text="Google"
-        to="mailto:lmmmmmm12138@gmail.com"
+        to="mailto:lmmmmmm12138@gmail.com?subject=Hi"
       />
       <ExternalLink
         icon="i-carbon:logo-twitter"

@@ -41,13 +41,14 @@
       function dynamicMeta() {
         // remove prev meta
         const meta = document.querySelector('meta[name="theme-color"]');
+        const theme = colorSchema.matches ? '#212121' : '#fff';
         if (meta) {
-          meta.content = colorSchema.matches ? '#212121' : '#fff';
+          meta.content = theme;
         } else {
           // new meta
           const _meta = document.createElement('meta');
           _meta.name = 'theme-color';
-          _meta.content = colorSchema.matches ? '#212121' : '#fff';
+          _meta.content = theme;
           document.head.appendChild(_meta);
         }
       }
