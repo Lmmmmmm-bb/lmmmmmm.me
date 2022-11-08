@@ -7,6 +7,7 @@
     "dev": "vite --host",
     "build": "vue-tsc --noEmit && vite-ssg build",
     "preview": "vite preview",
+    "lint": "pnpm lint:fix & pnpm lint:format",
     "lint:check": "pnpm prettier --check .",
     "lint:format": "pnpm prettier --write .",
     "lint:fix": "eslint --ext .ts,.js,.vue --fix ./src --fix",
