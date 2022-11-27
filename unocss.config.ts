@@ -16,5 +16,10 @@ export default defineConfig({
   shortcuts: {
     'text-primary': 'color-#000 dark:color-#fff',
     'text-secondary': 'color-#222 dark:color-#ddd'
-  }
+  },
+  safelist: [
+    'i-carbon:logo-github',
+    'i-carbon:logo-google',
+    'i-carbon:logo-twitter'
+  ]
 });
