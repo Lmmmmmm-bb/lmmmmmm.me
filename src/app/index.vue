@@ -10,10 +10,12 @@ import ExternalLink from '~/components/external-link';
       <span block>Hello,</span>
       <span block mt-2>I'm lmmmmmm.</span>
     </header>
-    <div mt-6 text-secondary>
-      <div>Front-end developer.</div>
-      <div mt-2>Like to make little toys.</div>
-      <div mt-2>Enjoy open source and try to join open source projects.</div>
+    <div mt-6 text-secondary text-xl>
+      <p>Front-end developer.</p>
+      <p mt-2>Like open source and make little toys.</p>
+      <p mt-2>
+        Make some simple contributions to the community in my free time.
+      </p>
     </div>
     <div mt-4 flex gap-xl>
       <ExternalLink
