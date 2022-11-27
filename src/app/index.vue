@@ -1,10 +1,16 @@
 <script setup lang="ts">
 import ExternalLink from '~/components/external-link';
+import { externalConfig } from './config';
 </script>
 
 <template>
   <main
-    class="px-6 py-[8vh] max-w-[76ch] mx-auto xl:text-lg dark:prose-invert transition-colors"
+    p="x-6 y-8vh"
+    max-w-76ch
+    mx-auto
+    xl:text-lg
+    dark:prose-invert
+    transition-colors
   >
     <header text-5xl font-bold text-primary>
       <span block>Hello,</span>
@@ -19,19 +25,9 @@ import ExternalLink from '~/components/external-link';
     </div>
     <div mt-4 flex gap-xl>
       <ExternalLink
-        icon="i-carbon:logo-github"
-        text="GitHub"
-        to="https://github.com/Lmmmmmm-bb"
-      />
-      <ExternalLink
-        icon="i-carbon:logo-google"
-        text="Google"
-        to="mailto:lmmmmmm12138@gmail.com?subject=Hi"
-      />
-      <ExternalLink
-        icon="i-carbon:logo-twitter"
-        text="Twitter"
-        to="https://twitter.com/_lmmmmmm"
+        v-for="item in externalConfig"
+        :key="item.text"
+        v-bind="item"
       />
     </div>
   </main>
