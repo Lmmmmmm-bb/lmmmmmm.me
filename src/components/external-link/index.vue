@@ -5,7 +5,6 @@ const props = defineProps<{ to: string; text: string; icon: string }>();
 <template>
   <a
     :href="props.to"
-    p="x-2 y-1"
     text-secondary
     inline-flex
     items-center
@@ -13,11 +12,12 @@ const props = defineProps<{ to: string; text: string; icon: string }>();
     bg-gray-50
     transition-colors
     decoration-none
+    p="x-2 y-1"
     hover="bg-black text-white"
     dark="hover:bg-white hover:text-#333 bg-gray-50/10"
     target="_blank"
   >
-    <div text-xl :class="props.icon" />
-    <div ml-1>{{ props.text }}</div>
+    <i text-xl :class="props.icon" />
+    <span ml-1>{{ props.text }}</span>
   </a>
 </template>
