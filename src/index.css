@@ -2,6 +2,7 @@
   --lm-bg: #ffffff;
   --lm-scroll: #d9d9d9;
   --lm-scroll-hover: #bbbbbb;
+  --lm-light: #000;
   scrollbar-color: var(--lm-scrollbar) var(--lm-bg);
 }
 
@@ -9,6 +10,7 @@ html.dark {
   --lm-bg: #212121;
   --lm-scroll: #333333;
   --lm-scroll-hover: #555555;
+  --lm-light: #fff;
 }
 
 html,
@@ -21,6 +23,47 @@ body {
 
 #app {
   height: 100%;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#app::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  left: -100%;
+  top: -100%;
+  width: 300%;
+  height: 300%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: conic-gradient(
+    transparent,
+    var(--lm-light),
+    transparent 15%
+  );
+  animation: rotate 6s linear infinite;
+}
+
+#app::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 2px;
+  top: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background: var(--lm-bg);
+  border-radius: 6px;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 ::-webkit-scrollbar {
