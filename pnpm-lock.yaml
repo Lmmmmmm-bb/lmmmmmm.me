@@ -10,6 +10,7 @@ specifiers:
   '@unocss/preset-icons': ^0.45.21
   '@unocss/preset-typography': ^0.45.21
   '@unocss/reset': ^0.45.21
+  '@vercel/analytics': ^0.1.8
   '@vitejs/plugin-vue': ^3.0.1
   '@vueuse/head': ^0.7.11
   eslint: ^8.20.0
@@ -28,6 +29,7 @@ specifiers:
 
 dependencies:
   '@unocss/reset': 0.45.21
+  '@vercel/analytics': 0.1.8
   vue: 3.2.37
 
 devDependencies:
@@ -709,6 +711,12 @@ packages:
       magic-string: 0.26.3
       vite: 3.0.2
     dev: true
+
+  /@vercel/analytics/0.1.8:
+    resolution: {integrity: sha512-PQrOI8BJ9qUiVJuQfnKiJd15eDjDJH9TBKsNeMrtelT4NAk7d9mBVz1CoZkvoFnHQ0OW7Xnqmr1F2nScfAnznQ==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dev: false
 
   /@vitejs/plugin-vue/3.0.1_vite@3.0.2+vue@3.2.37:
     resolution: {integrity: sha512-Ll9JgxG7ONIz/XZv3dssfoMUDu9qAnlJ+km+pBA0teYSXzwPCIzS/e1bmwNYl5dcQGs677D21amgfYAnzMl17A==}
