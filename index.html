@@ -38,11 +38,14 @@
     <meta property="og:description" content="_lmmmmmm, Front-end Developer." />
     <link rel="canonical" href="https://lmmmmmm.me/" />
     <title>_lmmmmmm</title>
+    <!-- dark mode -->
     <script>
+      const colorSchema = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
       // dynamic change theme color
       function dynamicMeta() {
         // remove prev meta
         const meta = document.querySelector('meta[name="theme-color"]');
+
         const theme = colorSchema.matches ? '#212121' : '#fff';
         if (meta) {
           meta.content = theme;
@@ -54,11 +57,6 @@
           document.head.appendChild(_meta);
         }
       }
-    </script>
-    <!-- dark mode -->
-    <script>
-      const colorSchema =
-        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
       const darkSchema = colorSchema.matches;
       document.documentElement.classList.toggle('dark', darkSchema);
       dynamicMeta();
@@ -75,6 +73,7 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
+        // eslint-disable-next-line prefer-rest-params, no-undef
         dataLayer.push(arguments);
       }
       gtag('js', new Date());
