@@ -1,9 +1,9 @@
 import {
   defineConfig,
   presetAttributify,
+  presetIcons,
   presetTypography,
   presetUno,
-  presetIcons
 } from 'unocss';
 
 export default defineConfig({
@@ -11,15 +11,15 @@ export default defineConfig({
     presetAttributify(),
     presetUno(),
     presetTypography(),
-    presetIcons()
+    presetIcons(),
   ],
   shortcuts: {
     'text-primary': 'color-#000 dark:color-#fff',
-    'text-secondary': 'color-#222 dark:color-#ddd'
+    'text-secondary': 'color-#222 dark:color-#ddd',
   },
   safelist: [
     'i-carbon:logo-github',
     'i-carbon:logo-google',
-    'i-carbon:logo-twitter'
-  ]
+    'i-carbon:logo-twitter',
+  ],
 });
