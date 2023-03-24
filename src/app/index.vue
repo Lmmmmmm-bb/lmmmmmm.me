@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { externalConfig } from './config';
 import ExternalLink from '~/components/external-link';
+import { externalConfig } from './config';
 </script>
 
 <template>
