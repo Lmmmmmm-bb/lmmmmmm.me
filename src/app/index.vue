@@ -19,7 +19,7 @@ import { externalConfig } from './config';
     <div mt-6 text-secondary text-xl>
       <p>Front-end developer.</p>
       <p mt-2>
-        Like open source and make little toys.
+        Like open source and make toys.
       </p>
       <p mt-2>
         Make some simple contributions to the community in free time.
