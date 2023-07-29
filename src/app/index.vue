@@ -29,6 +29,7 @@ import { externalConfig } from './config';
       <ExternalLink
         v-for="item in externalConfig"
         :key="item.text"
+        :data-umami-event="item.event"
         v-bind="item"
       />
     </div>
