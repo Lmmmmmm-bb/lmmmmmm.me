@@ -5,13 +5,12 @@ const props = defineProps<{ to: string; text: string; icon: string }>();
 <template>
   <a
     :href="props.to"
-    text-secondary
-    inline-flex
-    items-center
+    inline-flex items-center
     rounded-md
     bg-gray-50
     transition-colors
-    decoration-none
+    text-secondary decoration-none
+    select-none
     p="x-2 y-1"
     hover="bg-black text-white"
     dark="hover:bg-white hover:text-#333 bg-gray-50/10"
