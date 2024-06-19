@@ -20,6 +20,6 @@ export default defineConfig({
   safelist: [
     'i-carbon:logo-github',
     'i-carbon:logo-google',
-    'i-carbon:logo-twitter',
+    'i-carbon:logo-x',
   ],
 });
