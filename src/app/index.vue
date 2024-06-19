@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { externalConfig } from './config';
-import ExternalLink from '~/components/external-link';
+import ExternalLink from '~/components/ExternalLink/index.vue';
 </script>
 
 <template>
@@ -22,7 +22,7 @@ import ExternalLink from '~/components/external-link';
         Make some simple contributions to the community in free time.
       </p>
     </div>
-    <div mt-4 flex gap-xl>
+    <div mt-4 flex gap-sm>
       <ExternalLink
         v-for="item in externalConfig"
         :key="item.to"
