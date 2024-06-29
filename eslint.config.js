@@ -1,6 +1,8 @@
 import antfu from '@antfu/eslint-config';
 
-export default antfu({}, {
+export default antfu({
+  unocss: true,
+}, {
   rules: {
     'antfu/top-level-function': 'off',
 
