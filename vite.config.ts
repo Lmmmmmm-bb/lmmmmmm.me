@@ -1,7 +1,7 @@
 import { resolve } from 'node:path';
+import vue from '@vitejs/plugin-vue';
 import unocss from 'unocss/vite';
 import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
 import og from 'vite-plugin-open-graph';
 import devtools from 'vite-plugin-vue-devtools';
 

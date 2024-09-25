@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { externalConfig } from './config';
 import ExternalLink from '~/components/ExternalLink/index.vue';
+import { externalConfig } from './config';
 </script>
 
 <template>
