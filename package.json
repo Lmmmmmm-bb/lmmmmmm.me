@@ -22,7 +22,7 @@
     "@vitejs/plugin-vue": "^5.2.1",
     "@vueuse/head": "^2.0.0",
     "eslint": "^9.16.0",
-    "typescript": "^5.7.2",
+    "typescript": "5.6.2",
     "unocss": "^0.65.1",
     "vite": "^6.0.3",
     "vite-plugin-open-graph": "^2.0.6",
