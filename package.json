@@ -1,7 +1,7 @@
 {
   "name": "lmmmmmm.me",
   "type": "module",
-  "packageManager": "pnpm@10.7.0",
+  "packageManager": "pnpm@10.8.0",
   "scripts": {
     "dev": "vite --host",
     "build": "vue-tsc --noEmit && vite-ssg build",
@@ -9,22 +9,22 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "@unocss/reset": "^66.1.0-beta.7",
+    "@unocss/reset": "^66.1.0-beta.11",
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.11.0",
+    "@antfu/eslint-config": "^4.12.0",
     "@iconify-json/carbon": "^1.2.8",
-    "@types/node": "^22.13.14",
-    "@unocss/eslint-plugin": "^66.1.0-beta.7",
-    "@unocss/preset-icons": "^66.1.0-beta.7",
-    "@unocss/preset-typography": "^66.1.0-beta.7",
+    "@types/node": "^22.14.1",
+    "@unocss/eslint-plugin": "^66.1.0-beta.11",
+    "@unocss/preset-icons": "^66.1.0-beta.11",
+    "@unocss/preset-typography": "^66.1.0-beta.11",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vueuse/head": "^2.0.0",
-    "eslint": "^9.23.0",
+    "eslint": "^9.24.0",
     "typescript": "5.6.2",
-    "unocss": "^66.1.0-beta.7",
-    "vite": "^6.2.3",
+    "unocss": "^66.1.0-beta.11",
+    "vite": "^6.2.6",
     "vite-plugin-open-graph": "^2.0.6",
     "vite-plugin-vue-devtools": "^7.7.2",
     "vite-ssg": "^26.1.1",
