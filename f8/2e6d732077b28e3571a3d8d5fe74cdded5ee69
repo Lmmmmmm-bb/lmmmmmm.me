@@ -1,0 +1,16 @@
+src/app/index.vue
+  h_bf65792177625a 7-10,12-33,39-41,44-222
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "f82e6d732077b28e3571a3d8d5fe74cdded5ee69",
+  "prompts": {},
+  "humans": {
+    "h_bf65792177625a": {
+      "author": "_lmmmmmm <lmmmmmm12138@gmail.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
