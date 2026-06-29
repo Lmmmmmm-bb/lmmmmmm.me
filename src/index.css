@@ -1,69 +1,68 @@
 :root {
   --lm-bg: #ffffff;
-  --lm-scroll: #d9d9d9;
-  --lm-scroll-hover: #bbbbbb;
-  --lm-light: #000;
-  scrollbar-color: var(--lm-scrollbar) var(--lm-bg);
+  --lm-ink: #050505;
+  --lm-muted: #242424;
+  --lm-rule: rgba(5, 5, 5, 0.055);
+  --lm-hairline: rgba(5, 5, 5, 0.34);
+  --lm-watermark: rgba(5, 5, 5, 0.16);
+  --lm-scroll: #111111;
+  --lm-scroll-hover: #555555;
+  scrollbar-color: var(--lm-scroll) var(--lm-bg);
 }
 
 html.dark {
-  --lm-bg: #212121;
-  --lm-scroll: #333333;
-  --lm-scroll-hover: #555555;
-  --lm-light: #fff;
+  --lm-bg: #050505;
+  --lm-ink: #f7f7f7;
+  --lm-muted: #d8d8d8;
+  --lm-rule: rgba(247, 247, 247, 0.07);
+  --lm-hairline: rgba(247, 247, 247, 0.36);
+  --lm-watermark: rgba(247, 247, 247, 0.15);
+  --lm-scroll: #f7f7f7;
+  --lm-scroll-hover: #aaaaaa;
 }
 
 html,
 body {
   height: 100%;
   overflow: auto;
-  font-family: 'Varela Round', sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background-color: var(--lm-bg);
+  color: var(--lm-ink);
 }
 
 #app {
-  height: 100%;
+  min-height: 100%;
   position: relative;
   z-index: 0;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  overflow: auto;
+  background:
+    radial-gradient(circle at 18px 18px, var(--lm-rule) 1px, transparent 1.5px) 0 0 / 36px 36px,
+    var(--lm-bg);
 }
 
 #app::before {
   content: '';
-  position: absolute;
-  z-index: -2;
-  left: -100%;
-  top: -100%;
-  width: 300%;
-  height: 300%;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-image: conic-gradient(
-    transparent,
-    var(--lm-light),
-    transparent 15%
-  );
-  animation: rotate 6s linear infinite;
+  position: fixed;
+  inset: 12px;
+  z-index: -1;
+  pointer-events: none;
+  border: 1px solid var(--lm-ink);
 }
 
 #app::after {
   content: '';
-  position: absolute;
-  z-index: -1;
-  left: 2px;
-  top: 2px;
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
-  background: var(--lm-bg);
-  border-radius: 6px;
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotate(1turn);
-  }
+  position: fixed;
+  right: 12px;
+  top: 12px;
+  z-index: 1;
+  width: 72px;
+  height: 72px;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--lm-ink), var(--lm-ink)) 50% 0 / 1px 100% no-repeat,
+    linear-gradient(90deg, var(--lm-ink), var(--lm-ink)) 0 50% / 100% 1px no-repeat;
+  opacity: .65;
 }
 
 ::-webkit-scrollbar {
@@ -85,16 +84,29 @@ body {
 }
 
 ::selection {
-  background: #333;
-  color: #fff;
+  background: var(--lm-ink);
+  color: var(--lm-bg);
 }
 
 ::-moz-selection {
-  background: #333;
-  color: #fff;
+  background: var(--lm-ink);
+  color: var(--lm-bg);
 }
 
 ::-webkit-selection {
-  background: #333;
-  color: #fff;
+  background: var(--lm-ink);
+  color: var(--lm-bg);
+}
+
+@media (max-width: 640px) {
+  #app::before {
+    inset: 6px;
+  }
+
+  #app::after {
+    width: 44px;
+    height: 44px;
+    right: 6px;
+    top: 6px;
+  }
 }
