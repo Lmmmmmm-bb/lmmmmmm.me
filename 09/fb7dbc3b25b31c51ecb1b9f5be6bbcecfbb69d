@@ -1,0 +1,38 @@
+src/app/config.ts
+  s_0e330dac4591bf::t_ee580a818b2da5 2 gitai:{"mixed_line_ranges":[{"Single":2}],"operations":[]}
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "09fb7dbc3b25b31c51ecb1b9f5be6bbcecfbb69d",
+  "prompts": {},
+  "sessions": {
+    "s_0e330dac4591bf": {
+      "agent_id": {
+        "tool": "trae",
+        "id": "6a4232059eda0f2f6ce26859",
+        "model": "openrouter-3o__dev"
+      },
+      "human_author": "_lmmmmmm <lmmmmmm12138@gmail.com>"
+    }
+  },
+  "attestation_metadata": {
+    "src/app/config.ts": [
+      {
+        "hash": "s_0e330dac4591bf::t_ee580a818b2da5",
+        "line_ranges": [
+          {
+            "Single": 2
+          }
+        ],
+        "mixed_line_ranges": [
+          {
+            "Single": 2
+          }
+        ],
+        "operations": []
+      }
+    ]
+  },
+  "remote_transcripts": {}
+}
